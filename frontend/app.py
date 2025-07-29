@@ -19,7 +19,7 @@ data = {
 }
 
 if st.button("Predict"):
-    response = requests.post("http://backend:8000/predict", json=data)  # Replace localhost with Render/HF URL after deployment
+    response = requests.post("https://diabetes-predictor-d2jp.onrender.com/predict", json=data)  # Replace localhost with Render/HF URL after deployment
     if response.status_code == 200:
         result = response.json()
         prediction = result["prediction"]
